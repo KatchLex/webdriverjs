@@ -17,7 +17,7 @@ async function siteHandler(){
   await driver.findElement(By.className('close jqmClose')).click();
   await driver.findElement(By.className('top-btn inline-search-show twosmallfont')).click();
   await driver.sleep(3000);
-  var query = driver.wait(until.elementLocated(By.css('#title-search-input')));
+  var query = driver.wait(until.elementLocated(By.id('title-search-input')));
   await query.sendKeys('фурнитура', Key.ENTER);
 }
 siteHandler()
